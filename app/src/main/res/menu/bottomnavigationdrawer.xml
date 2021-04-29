@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+
+        android:id="@+id/nav_commercial"
+        android:icon="@drawable/com"
+        android:title="Commercial "
+        />
+
+    <item
+
+
+        android:id="@+id/nav_fumigation"
+        android:icon="@drawable/fume"
+        android:title="Fumigation"
+        />
+
+
+    <item
+
+
+        android:id="@+id/nav_outdoor"
+        android:icon="@drawable/out"
+        android:title="Outdoor Control"
+        />
+
+
+</menu>

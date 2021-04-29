@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Terminator</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="About">
+
+We are the best choice in pest control as we have advanced and smarter solutions which are eco-friendly. For the health of our future, we use an IPM (Integrated Pest Management) approach which is more effective and environmentally sensitive. This involves taking advantage of all appropriate pest management strategies, including pest prevention, utilizing green methods and the judicious use of pesticides with low-to-no-toxicity.
+    </string>
+
+    <string name="commercial">
+We provide effective and reliable pest control to both commercial and residential customers for:
+
+1st degree
+
+Termites including pre-construction termite  protection. Bed bugs (extermination). Cockroaches,  flies (house flies, blue bottles, fruit flies, silverfish).   Mosquitoes and Midges.
+2nd degree
+
+
+    </string>
+
+    <string name="outdoor">
+
+We will provide effective services to keep outdoor spaces in your homes, counties, parks, businesses, hotels and lodges and any commercial property comfortable and mosquito/flies free.
+We also offer special event sprays for weddings, picnics and other social stuff
+    </string>
+
+    <string name="prevention">
+
+We focus on prevention by removing conditions that attract pests, such as food, water, and shelter. Preventive actions include:
+* 		Sealing areas where pests enter buildings       (weatherization). Installing pest barriers to buildings       and goods/products.
+* 		Innovative use of minimizing pests encountering   
+
+    </string>
+
+    <string name="fumigation">
+
+We provide specialist effective state of the art fumigation services to residential and commercial customers. These will include commodity fumigation, container fumigation (either by sealing or tarped fumigation), silo fumigation including phosphine fumigation.
+
+</string>
+
+
+</resources>

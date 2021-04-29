@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <item
+
+        android:id="@+id/nav_home"
+        android:title="Terminator"
+        android:icon="@drawable/term"
+        android:iconTint="@null"
+
+        />
+    <item
+
+        android:id="@+id/nav_commercial"
+        android:title="Commercial Control"
+        android:icon="@drawable/com"
+        android:iconTint="@null"
+
+        />
+
+
+    <item
+
+        android:id="@+id/nav_fumigation"
+        android:title="Fumigation Services"
+        android:icon="@drawable/fume"
+        android:iconTint="@null"
+
+        />
+
+    <item
+
+        android:id="@+id/nav_outdoor"
+        android:title="Outdoor Control"
+        android:icon="@drawable/out"
+        android:iconTint="@null"
+
+        />
+
+
+    <item
+
+        android:id="@+id/nav_prevention"
+        android:title="Pest Prevention"
+        android:icon="@drawable/droid"
+        android:iconTint="@null"
+
+        />
+
+    <item
+
+        android:id="@+id/nav_bottom"
+        android:title="Bottom Navigation"
+        android:icon="@drawable/down"
+        android:iconTint="@null"
+
+        />
+
+    <item
+
+        android:id="@+id/nav_recycler"
+        android:title="Other Services"
+        android:icon="@drawable/help"
+        android:iconTint="@null"
+
+        />
+    <item
+
+        android:id="@+id/nav_form"
+        android:title="Request Our Services"
+        android:icon="@drawable/droid2"
+        android:iconTint="@null"
+
+        />
+</menu>

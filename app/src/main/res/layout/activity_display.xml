@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DisplayActivity"
+    android:background="@drawable/prince"
+    >
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank You For Checking In With Us"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-black"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text1"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/droid"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text1"
+        android:id="@+id/image1"
+        />
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-black"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/image1"
+        android:id="@+id/resultTV"
+
+        />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+        android:text="We Believe in Quality Customer Service"
+        android:layout_below="@+id/para"
+        android:padding="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="#fff"
+        android:fontFamily="monospace"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/resultTV"
+        android:text="Home Page"
+        android:textAllCaps="false"
+        android:id="@+id/homebtn"
+        android:padding="10dp"
+        />
+
+</RelativeLayout>
+
+
+
+
+
