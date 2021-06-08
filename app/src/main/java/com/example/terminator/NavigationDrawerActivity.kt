@@ -13,9 +13,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 
 class NavigationDrawerActivity : AppCompatActivity(), NavigationView .OnNavigationItemSelectedListener {
-    //initialize the variable to tag the DrawerLayout Class
     private lateinit var drawer: DrawerLayout
-    private lateinit var toolbar: Toolbar  //toolbar
+    private lateinit var toolbar: Toolbar
     private lateinit var navView: NavigationView
 
 
@@ -28,7 +27,7 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView .OnNavigati
 
         //view identification
 
-        drawer = findViewById(R.id.nav_drawer)
+        drawer = findViewById(R.id.drawer_layout)
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         navView = findViewById(R.id.nav_drawer)
@@ -81,15 +80,12 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView .OnNavigati
 
 
 
-
-
             R.id.nav_outdoor ->{
                 val intentOutdoor = Intent(this@NavigationDrawerActivity,OutdoorActivity ::class.java)
 
                 startActivity(intentOutdoor)
             }
 
-            //intent sharing
             R.id.nav_prevention -> {
                 val intentPrevention = Intent(this@NavigationDrawerActivity, PestPreventionActivity::class.java)
                 startActivity(intentPrevention)

@@ -53,7 +53,11 @@ class FormActivity : AppCompatActivity() {
         editText5 = findViewById(R.id.EmailEt)
         editText6 = findViewById(R.id.PestET)
         editText7 = findViewById(R.id.DateET)
-        buttonClick = findViewById(R.id.click)
+        buttonClick = findViewById(R.id.btnsave)
+        buttonClick = findViewById(R.id.btnview)
+        buttonClick = findViewById(R.id.btndelete)
+        buttonClick = findViewById(R.id.btnupdate)
+
 
 
         names = textView.text as String

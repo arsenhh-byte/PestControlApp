@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class Homepage : AppCompatActivity() {
 
@@ -20,12 +21,18 @@ class Homepage : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         btnCall = findViewById(R.id.call)
         btnEmail = findViewById(R.id.email)
+        image1.setOnClickListener{
+            val intent =Intent(Intent(this,NavigationDrawerActivity::class.java))
+            startActivity(intent)
+        }
 
 
-        btnCall.setOnClickListener(View.OnClickListener {    val dialIntent = Intent(Intent.ACTION_DIAL)
-            dialIntent.data = Uri.parse("tel" + "0785691980")
+        btnCall.setOnClickListener {
+            val dialIntent = Intent(Intent.ACTION_DIAL)
+            dialIntent.data = Uri.parse("tel:" + "0785691980")
             startActivity(dialIntent)
-        })
+
+        }
 
         btnEmail.setOnClickListener(View.OnClickListener {   val addresses = "arsenhenry2@gmail.com"
             val subject = "works"

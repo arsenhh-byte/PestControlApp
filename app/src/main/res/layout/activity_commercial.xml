@@ -76,6 +76,7 @@
             android:layout_weight="1"
             android:textAllCaps="false"
             android:padding="10dp"
+            android:drawableLeft="@drawable/call"
             android:layout_margin="10dp"
             />
 
@@ -88,6 +89,7 @@
             android:textAllCaps="false"
             android:layout_margin="10dp"
             android:padding="10dp"
+            android:drawableLeft="@drawable/email"
             />
 
 
