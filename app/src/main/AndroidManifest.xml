@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Terminator">
         <activity android:name=".ContactUs"></activity>
-        <activity android:name=".HomePage" />
         <activity android:name=".DisplayActivity" />
         <activity android:name=".FormActivity" />
         <activity android:name=".RecyclerViewActivity" />
