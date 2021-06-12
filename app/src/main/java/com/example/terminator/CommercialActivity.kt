@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import kotlinx.android.synthetic.main.activity_commercial.*
+import kotlinx.android.synthetic.main.activity_contact_us.*
+import kotlinx.android.synthetic.main.activity_contact_us.image1
 
 class CommercialActivity : AppCompatActivity() {
 
@@ -17,10 +20,15 @@ class CommercialActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.landing_page)
 
         btnCall = findViewById(R.id.call)
         btnEmail = findViewById(R.id.email)
+        image1.setOnClickListener{
+            val intent =Intent(Intent(this,NavigationDrawerActivity::class.java))
+            startActivity(intent)
+        }
+
 
         btnCall.setOnClickListener(View.OnClickListener {    val dialIntent = Intent(Intent.ACTION_DIAL)
             dialIntent.data = Uri.parse("tel" + "0785691980")

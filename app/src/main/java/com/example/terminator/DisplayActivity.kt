@@ -29,7 +29,7 @@ class DisplayActivity : AppCompatActivity() {
 
         homebtn.setOnClickListener(View.OnClickListener {
 
-            val intenthome = Intent(this,Homepage::class.java)
+            val intenthome = Intent(this,LandingPage::class.java)
             startActivity(intenthome)
         })
 

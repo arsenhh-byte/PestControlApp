@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter
 import android.view.ViewGroup
 import android.widget.TextView
 
-class sqlListAdapter(private val context: Activity, private val name: Array<String>, private val gender: Array<String>, private val housenumber: Array<String>, private val phonenumber: Array<String>, private val email: Array<String>, private val pest_to_control: Array<String>, private val date_to_visit: Array<String>)
+class SqlListAdapter(private val context: Activity, private val name: Array<String>, private val gender: Array<String>, private val housenumber: Array<String>, private val phonenumber: Array<String>, private val email: Array<String>, private val pest_to_control: Array<String>, private val date_to_visit: Array<String>)
     : ArrayAdapter<String>(context,R.layout.activity_form
     ,name)
 {

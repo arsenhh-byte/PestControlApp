@@ -44,7 +44,7 @@ class SQLformactivity  : AppCompatActivity() {
 
         if (name.trim() != "" && gender.trim() != "" && house_number.trim() != "" && phone_number.trim() != ""&& email.trim() != ""&& pest_control.trim() != ""&& date.trim() != "" ) {
 
-            val status = databaseHandler.addUsers(sqlListModel(name,gender,house_number,Integer.valueOf(phone_number),email,pest_control,date))
+            val status = databaseHandler.addUsers(SqlListModel(name,gender,house_number,Integer.valueOf(phone_number),email,pest_control,date))
 
             if (status > -1){
                 Toast.makeText(applicationContext,"Record succesfully added", Toast.LENGTH_LONG).show()
@@ -71,7 +71,7 @@ class SQLformactivity  : AppCompatActivity() {
 
         val databaseHandler = DatabaseHandler(this)
         //
-        val viewdata: List<sqlListModel> = databaseHandler.readData()
+        val viewdata: List<SqlListModel> = databaseHandler.readData()
 
         val empArrayName = Array<String>(viewdata.size){"null"}
         val empArrayGender = Array<String>(viewdata.size){"null"}
@@ -97,7 +97,7 @@ class SQLformactivity  : AppCompatActivity() {
 
 
 
-        val myadpater = sqlListAdapter(this,empArrayName,empArrayGender,empArrayHouse,empArrayPhone,empArrayEmail,empArrayPest,empArrayDate)
+        val myadpater = SqlListAdapter(this,empArrayName,empArrayGender,empArrayHouse,empArrayPhone,empArrayEmail,empArrayPest,empArrayDate)
 
 
         listItems.adapter = myadpater
@@ -128,7 +128,7 @@ class SQLformactivity  : AppCompatActivity() {
 
             if (Inputphone.trim() != ""){
 
-                val status = databaseHandler.deleteData(sqlListModel("","","",0,"","",""))
+                val status = databaseHandler.deleteData(SqlListModel("","","",0,"","",""))
                 if (status > -1){
                     Toast.makeText(applicationContext,"Record successfully deleted", Toast.LENGTH_LONG).show()
 
@@ -205,7 +205,7 @@ class SQLformactivity  : AppCompatActivity() {
 
 
                 val databaseHandler  = DatabaseHandler(this)
-                val status = databaseHandler.updateData(sqlListModel(updateName,updateGender,updateHouse,Integer.valueOf(updatePhone),updateEmail,updatePest,updateDate))
+                val status = databaseHandler.updateData(SqlListModel(updateName,updateGender,updateHouse,Integer.valueOf(updatePhone),updateEmail,updatePest,updateDate))
 
                 if(status > -1){
                     Toast.makeText(applicationContext,"Update successful", Toast.LENGTH_LONG).show()

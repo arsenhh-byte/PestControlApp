@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.terminator.RecyclerViewModel
-import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlinx.android.synthetic.main.landing_page.view.*
 import kotlinx.android.synthetic.main.recycle_item.view.*
 
 class RecyclerViewAdapter(private val context: Context,private val itemList: List<RecyclerViewModel>)  : RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder>() {

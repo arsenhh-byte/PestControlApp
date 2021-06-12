@@ -6,13 +6,13 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.terminator.sqlListModel
+import com.example.terminator.SqlListModel
 
 class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME,null,DATABASE_VERSION) {
     companion object{
         private val DATABASE_VERSION = 1
         private val DATABASE_NAME = "UserDatabase"
-        private val TABLE_CUSTOMERS = "Customer's Table"
+        private val CUSTOMER_TABLE = "CustomerTable"
         private val KEY_NAME = "name"
         private val KEY_GENDER = "gender"
         private val KEY_HOUSENUMBER = "house number"
@@ -26,7 +26,7 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
     //creating SQLite Database
     override fun onCreate(db: SQLiteDatabase?) {
         //defining our query
-        val CREATE_SUBMITTED_TABLE = ("CREATE TABLE " + TABLE_CUSTOMERS + "("
+        val CREATE_SUBMITTED_TABLE = ("CREATE TABLE " + CUSTOMER_TABLE + "("
                 + KEY_NAME + " TEXT, " + KEY_GENDER + "TEXT," + KEY_HOUSENUMBER +
                 "TEXT," + KEY_PHONE + "INTEGER PRIMARY KEY," +
                 KEY_EMAIL + " TEXT" + KEY_PEST + "TEXT, "
@@ -38,12 +38,12 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
 
     //notifying the db incase of a change
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db!!.execSQL("DROP TABLE IF EXISTS" + TABLE_CUSTOMERS)
+        db!!.execSQL("DROP TABLE IF EXISTS" + CUSTOMER_TABLE)
         onCreate(db)
     }
 
     //method to create records
-    fun addUsers(sqlListModel: sqlListModel): Long{
+    fun addUsers(sqlListModel: SqlListModel): Long{
         val db = this.writableDatabase
         //defining and placing our content
         val contentValues = ContentValues()
@@ -61,7 +61,7 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
 
 
         //insert this row to table in database
-        val success = db.insert(TABLE_CUSTOMERS,null,contentValues)
+        val success = db.insert(CUSTOMER_TABLE,null,contentValues)
         //close the database connection
         db.close()
         //return output of method
@@ -70,11 +70,11 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
     }
 
     //method to read data
-    fun readData(): List<sqlListModel>{
+    fun readData(): List<SqlListModel>{
         //get resizeable array for our data
-        val userArray: ArrayList<sqlListModel> = ArrayList<sqlListModel>()
+        val userArray: ArrayList<SqlListModel> = ArrayList<SqlListModel>()
         //defining our select query
-        val selectQuery = "SELECT  * FROM $TABLE_CUSTOMERS"
+        val selectQuery = "SELECT  * FROM $CUSTOMER_TABLE"
         //define the sqlite method
         val db = this.readableDatabase
         //reading our data and saving it to our arraylist
@@ -104,7 +104,7 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
                 userPest = cursor.getString(cursor.getColumnIndex("pest to control"))
                 userDate = cursor.getString(cursor.getColumnIndex("Date"))
 
-                val emp= sqlListModel(userName = userName, userGender = userGender, userHouse = userHouse, userPhone = userPhone, userEmail = userEmail, userPest = userPest, userDate = userDate)
+                val emp= SqlListModel(userName = userName, userGender = userGender, userHouse = userHouse, userPhone = userPhone, userEmail = userEmail, userPest = userPest, userDate = userDate)
                 userArray.add(emp)
             } while (cursor.moveToNext())
         }
@@ -113,7 +113,7 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
     }
 
     //update method
-    fun updateData(sqlListModel: sqlListModel) : Int{
+    fun updateData(sqlListModel: SqlListModel) : Int{
         //process in db
         val db  = this.writableDatabase
         //content values
@@ -129,7 +129,7 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
 
 
         //updating the row
-        val success = db.update(TABLE_CUSTOMERS,contentValues,"email=" + sqlListModel.userEmail,null)
+        val success = db.update(CUSTOMER_TABLE,contentValues,"email=" + sqlListModel.userEmail,null)
         //close the connection
         db.close()
 
@@ -138,14 +138,14 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context,DATABASE_NAME
     }
 
     //delete method
-    fun deleteData(sqlListModel: sqlListModel) : Int{
+    fun deleteData(sqlListModel: SqlListModel) : Int{
         //process
         val db = this.writableDatabase
         //contentvalues
         val contentValues = ContentValues()
         contentValues.put(KEY_EMAIL, sqlListModel.userEmail)
         //delete process
-        val success = db.delete(TABLE_CUSTOMERS,"email=" + sqlListModel.userEmail,null)
+        val success = db.delete(CUSTOMER_TABLE,"email=" + sqlListModel.userEmail,null)
         db.close()
         return success
 

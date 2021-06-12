@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ListView
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -54,7 +52,7 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView .OnNavigati
         when(item.itemId) {
             R.id.nav_home -> {
                 val intentHome =
-                    Intent(this@NavigationDrawerActivity, Homepage::class.java)
+                    Intent(this@NavigationDrawerActivity, LandingPage::class.java)
                 startActivity(intentHome)
             }
 
@@ -70,14 +68,6 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView .OnNavigati
                     Intent(this@NavigationDrawerActivity, FumigationActivity::class.java)
                 startActivity(intentFumigation)
             }
-
-
-            R.id.nav_bottom -> {
-                val intentBottom =
-                    Intent(this@NavigationDrawerActivity,BottomNavigation ::class.java)
-                startActivity(intentBottom)
-            }
-
 
 
             R.id.nav_outdoor ->{
@@ -102,6 +92,10 @@ class NavigationDrawerActivity : AppCompatActivity(), NavigationView .OnNavigati
             R.id.nav_form -> {
                 val intentForm = Intent(this@NavigationDrawerActivity, FormActivity::class.java)
                 startActivity(intentForm)
+            }
+            R.id.nav_contact -> {
+                val intentContact = Intent(this@NavigationDrawerActivity, ContactUs::class.java)
+                startActivity(intentContact)
             }
 //
         }

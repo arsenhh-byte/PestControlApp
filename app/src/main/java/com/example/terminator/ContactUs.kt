@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_contact_us.*
 
-class Homepage : AppCompatActivity() {
+class ContactUs : AppCompatActivity() {
 
 
     lateinit var btnCall: Button
@@ -18,7 +18,7 @@ class Homepage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.homepage2)
         btnCall = findViewById(R.id.call)
         btnEmail = findViewById(R.id.email)
         image1.setOnClickListener{

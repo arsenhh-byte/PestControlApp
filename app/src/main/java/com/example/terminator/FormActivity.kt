@@ -56,7 +56,7 @@ class FormActivity : AppCompatActivity() {
         buttonClick = findViewById(R.id.btnsave)
         buttonClick = findViewById(R.id.btnview)
         buttonClick = findViewById(R.id.btndelete)
-        buttonClick = findViewById(R.id.btnupdate)
+        buttonClick = findViewById(R.id.btnUpdate)
 
 
 
