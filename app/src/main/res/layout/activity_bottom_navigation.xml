@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".BottomNavigation">
 
-    <include layout="@layout/activity_main"/>
+    <include layout="@layout/landing_page"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

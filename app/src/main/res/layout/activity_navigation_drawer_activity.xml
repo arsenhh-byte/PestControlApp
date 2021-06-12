@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +11,7 @@
     android:id="@+id/drawer_layout"
     tools:openDrawer="start"
     tools:context=".NavigationDrawerActivity">
+
 
 
     <LinearLayout
@@ -38,7 +41,6 @@
 <!--            android:id="@+id/fragmentContainer"-->
 <!--            />-->
 
-        <?xml version="1.0" encoding="utf-8"?>
         <ScrollView
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -51,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 xmlns:tools="http://schemas.android.com/tools"
-                tools:context=".Homepage"
+                tools:context=".LandingPage"
                 android:background="@drawable/stones"
                 >
 

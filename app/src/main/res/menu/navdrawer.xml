@@ -49,14 +49,7 @@
 
         />
 
-    <item
 
-        android:id="@+id/nav_bottom"
-        android:title="Bottom Navigation"
-        android:icon="@drawable/down"
-        android:iconTint="@null"
-
-        />
 
     <item
 
@@ -71,6 +64,15 @@
         android:id="@+id/nav_form"
         android:title="Request Our Services"
         android:icon="@drawable/droid2"
+        android:iconTint="@null"
+
+        />
+
+    <item
+
+        android:id="@+id/nav_contact"
+        android:title="Reach out"
+        android:icon="@drawable/call"
         android:iconTint="@null"
 
         />
